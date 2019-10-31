@@ -1,97 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="keywords" content="Contacto CODERC">
+{% extends 'core/base.html' %}
 
-    <title>CODERC - Contacto</title>
-
-    <!-- Styles -->
-    <link href="assets/css/core.min.css" rel="stylesheet">
-    <link href="assets/css/thesaas.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" href="assets/img/favicon.png">
-  </head>
-
-  <body>
+    {% block title %}CODERC - Contacto{% endblock %}
 
 
-    <!-- Topbar -->
-    <nav class="topbar topbar-inverse topbar-expand-md topbar-sticky">
-      <div class="container">
-
-        <div class="topbar-left">
-          <button class="topbar-toggler">&#9776;</button>
-          <a class="topbar-brand" href="index.html">
-            <img class="logo-default" src="assets/img/logo.png" alt="logo">
-            <img class="logo-inverse" src="assets/img/logo-md.png" alt="logo">
-          </a>
-        </div>
-
-
-        <div class="topbar-right">
-          <ul class="topbar-nav nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Servicios <i class="fa fa-caret-down"></i></a>
-              <div class="nav-submenu">
-                <a class="nav-link" href="asesoria.html">Asesoria</a>
-                <a class="nav-link" href="capacitacion.html">Capacitación</a>
-                </div>
-            </li>
-<!-- Topbar
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blocks <i class="fa fa-caret-down"></i></a>
-              <div class="nav-submenu cols-2">
-                <a class="nav-link" href="block-feature.html">Feature</a>
-                <a class="nav-link" href="block-feature-textual.html">Textual feature</a>
-                <a class="nav-link" href="block-content.html">Contenidos</a>
-                <a class="nav-link" href="block-portfolio.html">Portafolios</a>
-                <a class="nav-link" href="block-pricing.html">Precios</a>
-                <a class="nav-link" href="block-cta.html">Call to action</a>
-                <a class="nav-link" href="block-testimonial.html">Testimonios</a>
-                <a class="nav-link" href="block-team.html">Equipo</a>
-                <a class="nav-link" href="block-contact.html">Contactos</a>
-                <a class="nav-link" href="block-signup.html">Registro</a>
-                <a class="nav-link" href="block-subscribe.html">Subscribe</a>
-                <a class="nav-link" href="block-partner.html">Afiliados</a>
-                <a class="nav-link" href="block-topbar.html">Topbar</a>
-                <a class="nav-link" href="block-footer.html">Footer</a>
-              </div>
-            </li>
--->
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-              <li class="nav-item">
-                <a class="nav-link" href="page-about.html">CODERC</a>
-
-            <li class="nav-item">
-              <a class="nav-link active" href="page-contact.html">Contáctanos</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Equipo CODERC <i class="fa fa-caret-down"></i></a>
-              <div class="nav-submenu">
-                <a class="nav-link" href="http://srv34.servidorhosting.net:2095/cpsess3065076142/webmail/paper_lantern/index.html?mailclient=horde">Ingresar</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </nav>
-    <!-- END Topbar -->
-
-
-
+    {% block header %}
+    {% load static %}
     <!-- Header -->
-    <header class="header header-inverse h- pb-80" style="background-image: url(assets/img/contact1.jpg);">
+    <header class="header header-inverse h- pb-80" style="background-image: url({% static 'core/assets/img/contact1.jpg'%});">
 
       <div class="container text-center">
 
@@ -107,10 +22,11 @@
       </div>
     </header>
     <!-- END Header -->
+    {% endblock %}
 
 
 
-
+    {% block mainContainer %}
     <!-- Main container -->
     <main class="main-content">
 
@@ -208,7 +124,7 @@
 
     </main>
     <!-- END Main container -->
-
+    {% endblock %}
 
 
 

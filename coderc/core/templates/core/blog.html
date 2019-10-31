@@ -1,94 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="keywords" content="blog ISWO SAS PAGINAS WEB EVENTOS CAMARA DE COMERCIO DE PASTO MARKETING DIGITAL SOCIAL MEDIA PAGINAS WEB">
-
-    <title>CODERC - Blog</title>
-
-    <!-- Styles -->
-    <link href="assets/css/core.min.css" rel="stylesheet">
-    <link href="assets/css/thesaas.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" href="assets/img/favicon.png">
-  </head>
-
-  <body>
+{% extends 'core/base.html' %}
+    {% block title %}CODERC - Blog{% endblock %}
 
 
-    <!-- Topbar -->
-    <nav class="topbar topbar-inverse topbar-expand-md topbar-sticky">
-      <div class="container">
 
-        <div class="topbar-left">
-          <button class="topbar-toggler">&#9776;</button>
-          <a class="topbar-brand" href="index.html">
-            <img class="logo-default" src="assets/img/logo.png" alt="logo">
-            <img class="logo-inverse" src="assets/img/logo-md.png" alt="logo">
-          </a>
-        </div>
-
-
-        <div class="topbar-right">
-          <ul class="topbar-nav nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Servicios <i class="fa fa-caret-down"></i></a>
-              <div class="nav-submenu">
-                <a class="nav-link" href="asesoria.html">Asesoria</a>
-                <a class="nav-link" href="capacitacion.html">Capacitación</a>
-                </div>
-            </li>
-  <!-- Topbar
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blocks <i class="fa fa-caret-down"></i></a>
-              <div class="nav-submenu cols-2">
-                <a class="nav-link" href="block-feature.html">Feature</a>
-                <a class="nav-link" href="block-feature-textual.html">Textual feature</a>
-                <a class="nav-link" href="block-content.html">Contenidos</a>
-                <a class="nav-link" href="block-portfolio.html">Portafolios</a>
-                <a class="nav-link" href="block-pricing.html">Precios</a>
-                <a class="nav-link" href="block-cta.html">Call to action</a>
-                <a class="nav-link" href="block-testimonial.html">Testimonios</a>
-                <a class="nav-link" href="block-team.html">Equipo</a>
-                <a class="nav-link" href="block-contact.html">Contactos</a>
-                <a class="nav-link" href="block-signup.html">Registro</a>
-                <a class="nav-link" href="block-subscribe.html">Subscribe</a>
-                <a class="nav-link" href="block-partner.html">Afiliados</a>
-                <a class="nav-link" href="block-topbar.html">Topbar</a>
-                <a class="nav-link" href="block-footer.html">Footer</a>
-              </div>
-            </li>
-  -->
-            <li class="nav-item">
-              <a class="nav-link active" href="blog.html">Blog</a>
-              <li class="nav-item">
-                <a class="nav-link" href="page-about.html">CODERC</a>
-
-            <li class="nav-item">
-              <a class="nav-link" href="page-contact.html">Contáctanos</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Equipo CODERC <i class="fa fa-caret-down"></i></a>
-              <div class="nav-submenu">
-                <a class="nav-link" href="http://srv34.servidorhosting.net:2095/cpsess3065076142/webmail/paper_lantern/index.html?mailclient=horde">Ingresar</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </nav>
-    <!-- END Topbar -->
-
-
+    {% block header %}
     <!-- Header -->
     <header class="header fadeout header-inverse pb-0 h-" style="background-image: linear-gradient(to bottom, #050613 70%, #AA871E 100%);">
       <canvas class="constellation"></canvas>
@@ -117,7 +32,10 @@
       </div>
     </header>
     <!-- END Header -->
+    {% endblock %}
 
+    {% block mainContainer %}
+    {% load static %}
     <!-- Main container -->
     <main class="main-content">
 
@@ -132,7 +50,7 @@
           <div class="card mb-30">
     <div class="row align-items-center h-full">
       <div class="col-12 col-md-4">
-        <a href="blog4.html"><img src="assets/img/blog-4.jpg" alt="..."></a>
+        <a href="blog4.html"><img src="{% static 'core/assets/img/blog-4.jpg'%}" alt="..."></a>
       </div>
 
       <div class="col-12 col-md-8">
@@ -151,7 +69,7 @@ Muchos Gerentes y Emprendedores son orgullosos porque han llegado a un muy alto 
   <div class="card mb-30">
   <div class="row align-items-center h-full">
   <div class="col-12 col-md-4">
-  <a href="blog3.html"><img src="assets/img/blog-3.jpg" alt="..."></a>
+  <a href="blog3.html"><img src="{% static 'core/assets/img/blog-3.jpg'%}" alt="..."></a>
   </div>
 
   <div class="col-12 col-md-8">
@@ -169,7 +87,7 @@ Muchos Gerentes y Emprendedores son orgullosos porque han llegado a un muy alto 
     <div class="card mb-30">
             <div class="row align-items-center h-full">
               <div class="col-12 col-md-4">
-                <a href="blog2.html"><img src="assets/img/blog-2.jpg" alt="..."></a>
+                <a href="blog2.html"><img src="{% static 'core/assets/img/blog-2.jpg'%}" alt="..."></a>
               </div>
 
               <div class="col-12 col-md-8">
@@ -189,7 +107,7 @@ Muchos Gerentes y Emprendedores son orgullosos porque han llegado a un muy alto 
           <div class="card mb-30">
             <div class="row align-items-center h-full">
               <div class="col-12 col-md-4">
-                <a href="blog1.html"><img src="assets/img/blog-1.jpg" alt=""></a>
+                <a href="blog1.html"><img src="{% static 'core/assets/img/blog-1.jpg'%}" alt=""></a>
               </div>
 
               <div class="col-12 col-md-8">
@@ -218,65 +136,4 @@ Muchos Gerentes y Emprendedores son orgullosos porque han llegado a un muy alto 
 
     </main>
     <!-- END Main container -->
-
-
-
-
-
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row gap-y align-items-center">
-          <div class="col-12 col-lg-3">
-            <p class="text-center text-lg-left">
-              <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
-            </p>
-          </div>
-
-          <div class="col-12 col-lg-6">
-            <ul class="nav nav-primary nav-hero">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="page-about.html">Empresa</a>
-              </li>
-              <li class="nav-item hidden-sm-down">
-                <a class="nav-link" href="capacitacion.html">Servicios</a>
-              </li>
-              <li class="nav-item hidden-sm-down">
-                <a class="nav-link" href="page-contact.html">Contacto</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="social text-center">
-            <a class="social-facebook" href="https://www.facebook.com/ISWOSAS/"><i class="fa fa-facebook"></i></a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- END Footer -->
-
-
-
-    <!-- Scripts -->
-    <script src="assets/js/core.min.js"></script>
-    <script src="assets/js/thesaas.min.js"></script>
-    <script src="assets/js/script.js"></script>
-
-    <div class="btn-whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=573177572971" target="_blank">
-    <img src="http://s2.accesoperu.com/logos/btn_whatsapp.png" alt="">
-    </a>
-    </div>
-
-  </body>
-
-</html>
+    {% endblock %}
