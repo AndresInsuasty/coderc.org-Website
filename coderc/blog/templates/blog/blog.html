@@ -1,0 +1,96 @@
+{% extends 'core/base.html' %}
+{% block title %}CODERC - Blog{% endblock %}
+
+
+
+{% block header %}
+<!-- Header -->
+<header class="header fadeout header-inverse pb-0 h-"
+  style="background-image: linear-gradient(to bottom, #050613 70%, #AA871E 100%);">
+  <canvas class="constellation"></canvas>
+
+  <div class="container">
+    <div class="row h-full">
+      <div class="col-12 text-center align-self-center">
+        <h1 class="fs-50 fw-600 lh-15 hidden-sm-down">¿Quieres ejecutar un Proyecto? <span class="text-primary"
+            data-type="Leer es la clave, los líderes leen, 10 veces más, que el promedio"></span></h1>
+        <h1 class="fs-35 fw-600 lh-15 hidden-md-up">¿Quieres ejecutar un Proyecto? <br><span class="text-primary"
+            data-type="Leer es la clave, los líderes leen, 10 veces más, que el promedio"></span></h1>
+        <br>
+        <p class="fs-20 hidden-sm-down">
+          <font size="5"><strong><i>Te compartimos </i></strong><i>las claves para la productividad y competitividad de
+              tu comunidad...</i></font>
+        </p>
+        <p class="fs-16 hidden-md-up">
+          <font size="5"><strong><i>Te compartimos </i></strong><i>las claves para la productividad y competitividad de
+              tu comunidad...</i></font>
+        </p>
+        <br>
+        <hr class="w-60 hidden-sm-down">
+
+        <a class="btn btn-xl btn-round btn-primary fs-20 fw-500 w-350 shadow-3 hidden-sm-down" href="">Nuevos
+          Artículos</a>
+        <a class="btn btn-lg btn-round btn-primary w-250 shadow-3 hidden-md-up" href="">Nuevos Artículos</a>
+
+        <p class="mt-2 mt-md-4">
+          <font size="5"><i>"Los problemas que tienes ahora, alguien ya los resolvió antes, y escribió para ti"...</i>
+          </font></a>
+        </p>
+      </div>
+
+      <div class="col-12 align-self-end text-center pb-70">
+        <a class="scroll-down-2 scroll-down-inverse" href="#" data-scrollto="section-demo"><span></span></a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- END Header -->
+{% endblock %}
+
+{% block mainContainer %}
+{% load static %}
+<!-- Main container -->
+<main class="main-content">
+
+  <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Basic cards
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+  <section class="section bg-gray">
+    <div class="container">
+
+      <div class="card mb-30">
+        {% for blog in blogs %}
+        <div class="row align-items-center h-full">
+          <div class="col-12 col-md-4">
+            <a href="blog4.html"><img src="{{blog.image.url}}" alt="..."></a>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="card-block">
+              <h4 class="card-title">{{blog.title}}</h4>
+              <p class="card-text">{{blog.description}}</p>
+              <a class="fw-600 fs-12" href="blog4.html">Leer más <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {% endfor %}
+      <nav class="flexbox mt-30">
+        <a class="btn btn-white disabled"><i class="ti-arrow-left fs-9 mr-4"></i>Mira los primeros Post</a>
+        <a class="btn btn-white" href="#">Mira los Nuevos Post <i class="ti-arrow-right fs-9 ml-4"></i></a>
+      </nav>
+      <br></br>
+      <div class="container">
+        <h6 class="heading-alt"> <i>Por favor comparte, suscribete, visita nuestras Redes Sociales, dale Me Gusta y
+            Comenta, así nos apoyas para continuar generando contenido.</i>
+          </i>
+          <div class="container">
+
+
+
+
+</main>
+<!-- END Main container -->
+{% endblock %}
