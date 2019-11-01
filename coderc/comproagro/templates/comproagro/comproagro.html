@@ -5,37 +5,81 @@
 {% block header %}
 {% load static %}
 <header class="header header-inverse h-fullscreen pb-80"
-  style="background-image: url({% static 'core/assets/img/agro.jpg'%});">
-  <div class="container text-center">
+    style="background-image: url({% static 'core/assets/img/agro.jpg'%});">
+    <div class="container text-center">
 
         <div class="row h-full">
-          <div class="col-12 col-lg-8 offset-lg-2 align-self-center">
-    
-            <h1 class="display-1 hidden-sm-down">ComproAgro</h1>
-            <h1 class="fs-40 hidden-md-up">Texto1</h1>
-            <p class="fs-20 w-600 mx-auto hidden-sm-down"><b><i>Para mejorar la calidad de vida de familias en condición de
-                  vulnerabilidad, con criterios de economía solidaria y comercio justo.<b><i></p>
-            <p class="fs-16 hidden-md-up">Para mejorar la calidad de vida de familias en condición de vulnerabilidad, con
-              criterios de economía solidaria y comercio justo.</p>
-    
-            <hr class="w-80">
-          </div>
-    
-          <div class="col-12 align-self-end text-center">
-            <a class="scroll-down-1 scroll-down-inverse" href="#" data-scrollto="section-intro"><span></span></a>
-          </div>
-    
+            <div class="col-12 col-lg-8 offset-lg-2 align-self-center">
+
+                <h1 class="display-1 hidden-sm-down">ComproAgro</h1>
+                <h1 class="fs-40 hidden-md-up">Texto1</h1>
+                <p class="fs-20 w-600 mx-auto hidden-sm-down"><b><i>Para mejorar la calidad de vida de familias en
+                            condición de
+                            vulnerabilidad, con criterios de economía solidaria y comercio justo.<b><i></p>
+                <p class="fs-16 hidden-md-up">Para mejorar la calidad de vida de familias en condición de
+                    vulnerabilidad, con
+                    criterios de economía solidaria y comercio justo.</p>
+
+                <hr class="w-80">
+            </div>
+
+            <div class="col-12 align-self-end text-center">
+                <a class="scroll-down-1 scroll-down-inverse" href="#" data-scrollto="section-intro"><span></span></a>
+            </div>
+
         </div>
-    
-      </div>
-  </header>
+
+    </div>
+</header>
 {% endblock %}
 
 
 {% block mainContainer %}
+{% load static %}
 <!-- Main container -->
 <main class="main-content">
-    <h1>Texto de prueba</h1>
-</main>
+    <section class="section bg-gray">
+        
+        <div class="container">
 
+            <div class="card mb-30">
+                {% for project in projects %}
+                <div class="row align-items-center h-full">
+                    <div class="col-12 col-md-4">
+                        <div class="container">
+                            <img src="{{project.image1.url}}" alt="...">
+                        </div>
+                        <div class="container">
+                            <img src="{{project.image2.url}}" alt="...">
+                        </div>
+                        <div class="container">
+                            <img src="{{project.image3.url}}" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="card-block">
+                            <h4 class="card-title">{{project.title}}</h4>
+                            <p class="card-text">{{project.description|linebreaks}}</p>
+                            <p class="card-text">Telefono: {{project.phone}}</p>
+                            <p class="card-text">Email: {{project.email}}</p>
+                            <p class="card-text">Dirección: {{project.address}}</p>
+                            <a href="{{project.technic_field.url}}">Ficha Tecnica</a>
+                        </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+            </div>
+            <br></br>
+            <div class="container">
+                <h6 class="heading-alt"> <i>Por favor comparte, suscribete, visita nuestras Redes Sociales, dale Me
+                        Gusta y
+                        Comenta, así nos apoyas para continuar generando contenido.</i>
+                    </i>
+                    <div class="container">
+
+
+
+
+</main>
 {% endblock %}
