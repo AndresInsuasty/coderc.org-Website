@@ -26,7 +26,8 @@
             </div>
 
             <div class="col-12 align-self-end text-center">
-                <a class="scroll-down-1 scroll-down-inverse" href="#" data-scrollto="section-intro"><span></span></a>
+                <a class="scroll-down-1 scroll-down-inverse" href="#main-content"
+                    data-scrollto="main-content"><span></span></a>
             </div>
 
         </div>
@@ -41,35 +42,39 @@
 <!-- Main container -->
 <main class="main-content">
     <section class="section bg-gray">
-        
+
         <div class="container">
 
             <div class="card mb-30">
                 {% for project in projects %}
-                <div class="row align-items-center h-full">
+                <div class="row align-items-center h-full" data-aos="fade-up" data-aos-delay="150">
+                        <div class="col-12 col-md-4">
+                        <img src="{{project.image1.url}}" alt="...">
+                    </div>
                     <div class="col-12 col-md-4">
-                        <div class="container">
-                            <img src="{{project.image1.url}}" alt="...">
-                        </div>
-                        <div class="container">
-                            <img src="{{project.image2.url}}" alt="...">
-                        </div>
-                        <div class="container">
-                            <img src="{{project.image3.url}}" alt="...">
-                        </div>
+                        <img src="{{project.image2.url}}" alt="...">
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <img src="{{project.image3.url}}" alt="...">
+                    </div>
+                </div>
+                <div class="row align-items-center h-full" data-aos="fade-up" data-aos-delay="150">
+                    <div class="col-12 col-md-4">
+                        <p class="card-text">Teléfono: {{project.phone}}</p>
+                        <p class="card-text">Email: {{project.email}}</p>
+                        <p class="card-text">Dirección: {{project.address}}</p>
+                        <a href="{{project.technic_field.url}}">Ficha Técnica</a>
                     </div>
                     <div class="col-12 col-md-8">
                         <div class="card-block">
                             <h4 class="card-title">{{project.title}}</h4>
                             <p class="card-text">{{project.description|linebreaks}}</p>
-                            <p class="card-text">Telefono: {{project.phone}}</p>
-                            <p class="card-text">Email: {{project.email}}</p>
-                            <p class="card-text">Dirección: {{project.address}}</p>
-                            <a href="{{project.technic_field.url}}">Ficha Tecnica</a>
+
                         </div>
                     </div>
 
                 </div>
+                <br>
                 {% endfor %}
             </div>
             <br></br>
