@@ -29,8 +29,8 @@ sostenibles {% endblock%}
         <br>
         <hr class="w-60 hidden-sm-down">
 
-        <a class="btn btn-xl btn-round btn-primary fs-20 fw-500 w-350 shadow-3 hidden-sm-down" href="page-about.html">Conoce Más</a>
-        <a class="btn btn-lg btn-round btn-primary w-250 shadow-3 hidden-md-up" href="page-about.html">Conoce Más</a>
+        <a class="btn btn-xl btn-round btn-primary fs-20 fw-500 w-350 shadow-3 hidden-sm-down" href="{% url 'about' %}">Conoce Más</a>
+        <a class="btn btn-lg btn-round btn-primary w-250 shadow-3 hidden-md-up" href="{% url 'about' %}">Conoce Más</a>
         <br>
           <p class="mt-2 mt-md-4"><font size="5"><i>"¿Buscas Soluciones? Conoce nuestros servicios</i></font></a></p>
     </div>
@@ -69,19 +69,19 @@ sostenibles {% endblock%}
       <div class="row gap-y text-center">
 
         <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-          <p><a href="asesoria.html"><img class="shadow-2 hover-shadow-5" src="{% static 'core/assets/img/asesoria1.jpg'%}" alt="demo bootstrap landing"></a></p>
+          <p><a href="{% url 'asesoria' %}"><img class="shadow-2 hover-shadow-5" src="{% static 'core/assets/img/asesoria1.jpg'%}" alt="demo bootstrap landing"></a></p>
           <p><strong>Asesoría, consultoría, formulación, gestión, ejecución y evaluación de proyectos y planes de negocio, que impulsen el desarrollo social,
             tecnológico, ambiental, y cultural de Colombia.</strong></p>
         </div>
 
 
         <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <p><a href="capacitacion.html"><img class="shadow-2 hover-shadow-5" src="{% static 'core/assets/img/capacitacion2.jpg'%}" alt="demo app landing"></a></p>
+        <p><a href="{% url 'capacitacion' %}"><img class="shadow-2 hover-shadow-5" src="{% static 'core/assets/img/capacitacion2.jpg'%}" alt="demo app landing"></a></p>
         <p><strong>Formación para el Trabajo y Desarrollo Humano. Conoce las mejores opciones para ti.</strong></p>
         </div>
 
         <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <p><a href="blog.html"><img class="shadow-2 hover-shadow-5" src="{% static 'core/assets/img/blog1.jpg'%}" alt="demo app landing"></a></p>
+        <p><a href="{% url 'blog' %}"><img class="shadow-2 hover-shadow-5" src="{% static 'core/assets/img/blog1.jpg'%}" alt="demo app landing"></a></p>
         <p><strong>Blog - Compartimos información para formular y ejecutar proyectos sostenibles.</strong></p>
         </div>
 
@@ -118,7 +118,7 @@ sostenibles {% endblock%}
       <b>
       </b></i></I>
     </header class="section-header">
-             <a href="page-contact.html"><i><p style="color:#467FD8";><p align="left"><u>Programemos una reunión gratuita</u></p></i></a>
+             <a href="{% url 'contacto' %}"><i><p style="color:#467FD8";><p align="left"><u>Programemos una reunión gratuita</u></p></i></a>
 
 
 
