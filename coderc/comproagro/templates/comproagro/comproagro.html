@@ -1,0 +1,41 @@
+{% extends 'core/base.html'%}
+
+{% block title %}Comproagro{% endblock %}
+
+{% block header %}
+{% load static %}
+<header class="header header-inverse h-fullscreen pb-80"
+  style="background-image: url({% static 'core/assets/img/agro.jpg'%});">
+  <div class="container text-center">
+
+        <div class="row h-full">
+          <div class="col-12 col-lg-8 offset-lg-2 align-self-center">
+    
+            <h1 class="display-1 hidden-sm-down">ComproAgro</h1>
+            <h1 class="fs-40 hidden-md-up">Texto1</h1>
+            <p class="fs-20 w-600 mx-auto hidden-sm-down"><b><i>Para mejorar la calidad de vida de familias en condición de
+                  vulnerabilidad, con criterios de economía solidaria y comercio justo.<b><i></p>
+            <p class="fs-16 hidden-md-up">Para mejorar la calidad de vida de familias en condición de vulnerabilidad, con
+              criterios de economía solidaria y comercio justo.</p>
+    
+            <hr class="w-80">
+          </div>
+    
+          <div class="col-12 align-self-end text-center">
+            <a class="scroll-down-1 scroll-down-inverse" href="#" data-scrollto="section-intro"><span></span></a>
+          </div>
+    
+        </div>
+    
+      </div>
+  </header>
+{% endblock %}
+
+
+{% block mainContainer %}
+<!-- Main container -->
+<main class="main-content">
+    <h1>Texto de prueba</h1>
+</main>
+
+{% endblock %}
