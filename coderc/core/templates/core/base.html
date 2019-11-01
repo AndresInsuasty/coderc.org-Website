@@ -47,12 +47,12 @@
 
             <div class="topbar-right">
                 <ul class="topbar-nav nav">
-                    <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link {%block activeNavbarHome%}{% endblock %}" href="{% url 'home' %}">Inicio</a></li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Servicios <i class="fa fa-caret-down"></i></a>
+                        <a class="nav-link {%block activeNavbarService%}{% endblock %}" href="#">Servicios <i class="fa fa-caret-down"></i></a>
                         <div class="nav-submenu">
-                            <a class="nav-link" href="{% url 'asesoria' %}">Asesoria</a>
+                            <a class="nav-link " href="{% url 'asesoria' %}">Asesoria</a>
                             <a class="nav-link" href="{% url 'capacitacion' %}">Capacitación</a>
                         </div>
                     </li>
@@ -78,13 +78,13 @@
             </li>
 -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                        <a class="nav-link {%block activeNavbarBlog%}{% endblock %}" href="{% url 'blog' %}">Blog</a>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">CODERC</a>
+                        <a class="nav-link {%block activeNavbarAbout%}{% endblock %}" href="{% url 'about' %}">CODERC</a>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'comproagro' %}">COMPROAGRO</a>
+                        <a class="nav-link {%block activeNavbarComproAgro%}{% endblock %}" href="{% url 'comproagro' %}">COMPROAGRO</a>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contacto' %}">Contáctanos</a>
+                        <a class="nav-link {%block activeNavbarContact%}{% endblock %}" href="{% url 'contacto' %}">Contáctanos</a>
                     </li>
 
                     <li class="nav-item">
