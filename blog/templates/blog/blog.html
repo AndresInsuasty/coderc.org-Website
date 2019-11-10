@@ -60,17 +60,19 @@
 
       <div class="card mb-30">
         {% for blog in blogs %}
-        <div class="row align-items-center h-full">
-          <div class="col-12 col-md-4">
-            <a href="blog4.html"><img src="{{blog.image.url}}" alt="..."></a>
-          </div>
-          <div class="col-12 col-md-8">
-            <div class="card-block">
-              <h4 class="card-title">{{blog.title}}</h4>
-              <p class="card-text">{{blog.description|linebreaks}}</p>
+        <div class="row align-items-center h-full" data-aos="fade-up" data-aos-delay="150">
+          <div class="row align-items-center h-full">
+            <div class="col-12 col-md-4">
+              <a href="blog4.html"><img src="{{blog.image.url}}" alt="..."></a>
             </div>
-          </div>
+            <div class="col-12 col-md-8">
+              <div class="card-block">
+                <h4 class="card-title">{{blog.title}}</h4>
+                <p class="card-text">{{blog.description|linebreaks}}</p>
+              </div>
+            </div>
 
+          </div>
         </div>
       </div>
       {% endfor %}
@@ -79,11 +81,54 @@
         <h6 class="heading-alt"> <i>Por favor comparte, suscribete, visita nuestras Redes Sociales, dale Me Gusta y
             Comenta, así nos apoyas para continuar generando contenido.</i>
           </i>
-          <div class="container">
+      </div>
 
 
 
 
 </main>
 <!-- END Main container -->
+<hr>
+<div class="container">
+  <h1>Comentarios:</h1>
+
+</div>
+<div class="row align-items-center h-full" data-aos="fade-up" data-aos-delay="100">
+  <div class="container">
+    <div class="card">
+      <form method="POST"> {% csrf_token %}
+        <input class="form-control" type="text" name="author" maxlength="200" required id="id_author"
+          placeholder="Nombre" /><br>
+        <textarea class="form-control rounded-0" name="text" cols="40" rows="3" required id="id_text"
+          placeholder="Comentario"></textarea><br>
+        <input class="form-control" type="text" name="email" maxlength="200" required id="id_email"
+          placeholder="Correo" /><br>
+        <button type="submit" class="btn btn-primary " value="Enviar">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+
+
+{% for comment in comments %}
+<div class="container">
+  <div class="card mb-30">
+    <div class="row align-items-center h-full" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <strong>{{ comment.author }}</strong>
+            <div class="date">{{ comment.created_date }}</div>
+            <p>{{ comment.text|linebreaks }}</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% empty %}
+      <p>Sé el primero en comentar!</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
 {% endblock %}
